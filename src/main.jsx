@@ -4,6 +4,7 @@ import NavBar from './NavBar/NavBar'
 import './index.css'
 import Middlebar from './middlebar/Middlebar'
 import Product from './products/Product'
+import Footer from './footer/Footer'
 
 {
   /* The following line can be included in your src/index.js or App.js file */
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
    <NavBar/>
    <Middlebar/>
    <Product/>
+   <Footer/>
    </>
   </React.StrictMode>,
 )

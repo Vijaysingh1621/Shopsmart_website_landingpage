@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/react": "^2.0.4",
+    "@heroicons/react": "^2.1.3",
     "bootstrap": "^5.3.3",
     "boxicons": "^2.1.4",
     "react": "^18.2.0",
