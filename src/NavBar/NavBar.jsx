@@ -3,13 +3,29 @@ import shopsmartlogo from "../assets/smartlogo.png"
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { IoIosSearch } from "react-icons/io";
 import "./navbar.css"
 import { LuLogIn } from "react-icons/lu";
 import { CgProfile } from "react-icons/cg";
+import { IoCartOutline } from "react-icons/io5";
 import { Switch } from '@headlessui/react'
 
 import Dropdown from 'react-bootstrap/Dropdown';
+
+
+
+import { AudioOutlined } from '@ant-design/icons';
+import { Input, Space } from 'antd';
+const { Search } = Input;
+const suffix = (
+  <AudioOutlined
+    style={{
+      fontSize: 16,
+      color: '#1677ff',
+    }}
+  />
+);
+const onSearch = (value, _e, info) => console.log(info?.source, value);
+
 
 
 
@@ -53,16 +69,19 @@ const NavBar = () => {
          <div href="#Products" className="options_name">Products</div>
          <div href="#Delivery" className="options_name">Delivery</div>
         </Nav>
-        <input type='text' className='search_bar' placeholder='search'>
-         
-        </input>
-
-        
-
+      
+        <Search className="search-bar" placeholder="Search products ,brands..." onSearch={onSearch} style={{paddingLeft:"10px" , paddingRight:"80px" , color:"orange"}}  enterButton  />
+   
+               
+        <div className="cart">
+          <IoCartOutline size={35} className='cart-icon' /> Cart
+        </div>
         <div className="login">
           < CgProfile style={{marginRight:"10px" , }} size={30}/>
          Login  <LuLogIn className='loginicon' size={20} />
         </div>
+        {/*  ------------- Dark mode hold-----------------
+        
         <Switch
               checked={enabled}
               onChange={setEnabled}
@@ -71,7 +90,7 @@ const NavBar = () => {
               className="group inline-flex h-6 w-11 items-center rounded-full bg-orange-600 transition data-[checked]:bg-gray-800 mx-3"
             >
               <span className="size-4 translate-x-1 rounded-full bg-white transition group-data-[checked]:translate-x-6" />
-          </Switch>
+  </Switch>*/}
 
 
         

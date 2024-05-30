@@ -1,26 +1,23 @@
-body{
-    background-color:rgb(91, 91, 133);
-}
 
-.search_bar{
+
+.search-bar{
     display: flex;
-    width: 400px;
-    font-size: 1rem;
-    padding-left: 10px;
-    border: 1px solid black;
-    border-radius: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    position: absolute;
-    left: 500px;
+    flex-wrap: wrap;
+    flex: 100%;
+    position: relative;
+    
+
 
 }
 .nav_container{
- position: relative;   
+ position: relative; 
+   
 }
 
 .login{
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
+    
     
 }
 .loginicon{
@@ -28,6 +25,17 @@ body{
     display: inline-block;
     margin-left: 5px;
     margin-bottom: 5px;
+    
+}
+.cart{
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+.cart-icon{
+    display: flex;
+    display: inline-block;
 }
 
 .dropdown{
@@ -64,7 +72,7 @@ body{
     }
     .dropdown{
         display: flex;
-        display: inline-block;
+        flex-direction: column;
         margin-right: 10px;
         
     }
@@ -73,14 +81,15 @@ body{
         margin-bottom: 50px; 
        }
 
-    .search_bar{
+    .search-bar{
         position: absolute;
-        left: 10px;
         top:50px;
+        left: 10px;
         display: flex;
+        display: block;
         flex-wrap: wrap;
         flex: 100%;
-        width: auto;
+        width: fit-content;
         
         
         
